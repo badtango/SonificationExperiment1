@@ -1,0 +1,70 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038
+{\fonttbl\f0\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue191;\red96\green96\blue96;\red191\green0\blue0;
+}
+\deftab560
+\pard\pardeftab560\ql\qnatural
+
+\f0\fs28 \cf0 (\
+\pard\pardeftab560\ql\qnatural
+\cf2 var\cf0  w, \
+ln = 600, ln2 = 152, lin = 700, lin2 = 250;\
+w = \cf2 Window\cf0 (\cf3 "Cube"\cf0 );\
+w.view.background = \cf2 Color\cf0 .white;\
+w.front;\
+w.fullScreen;\
+w.drawHook = \{\
+       \cf2 Pen\cf0 .use \{ \
+		\cf2 Pen\cf0 .translate(240, -35);\
+		\cf2 Pen\cf0 .color = \cf2 Color\cf0 .black;\
+		\cf2 Pen\cf0 .width = 1.5;\
+                \
+			\cf4 // left line\cf0 \
+			\cf2 Pen\cf0 .moveTo(\cf2 Point\cf0 (ln2, ln2));\
+			\cf2 Pen\cf0 .lineTo(\cf2 Point\cf0 (ln2, ln));	\
+			\cf4 // right line\cf0 \
+			\cf2 Pen\cf0 .moveTo(\cf2 Point\cf0 (ln, ln2));\
+			\cf2 Pen\cf0 .lineTo(\cf2 Point\cf0 (ln, ln));\
+			\cf4 // bottom line\cf0 \
+			\cf2 Pen\cf0 .moveTo(\cf2 Point\cf0 (ln, ln));\
+			\cf2 Pen\cf0 .lineTo(\cf2 Point\cf0 (ln2, ln));\
+			\cf4 // top line\cf0 \
+			\cf2 Pen\cf0 .moveTo(\cf2 Point\cf0 (ln2, ln2));\
+			\cf2 Pen\cf0 .lineTo(\cf2 Point\cf0 (ln, ln2));							\
+			\
+			\cf4 // second square\cf0 \
+			\cf4 // left line\cf0 \
+			\cf2 Pen\cf0 .moveTo(\cf2 Point\cf0 (lin2, lin2));\
+			\cf2 Pen\cf0 .lineTo(\cf2 Point\cf0 (lin2, lin));	\
+			\cf4 // right line\cf0 \
+			\cf2 Pen\cf0 .moveTo(\cf2 Point\cf0 (lin, lin2));\
+			\cf2 Pen\cf0 .lineTo(\cf2 Point\cf0 (lin, lin));\
+			\cf4 // bottom line\cf0 \
+			\cf2 Pen\cf0 .moveTo(\cf2 Point\cf0 (lin, lin));\
+			\cf2 Pen\cf0 .lineTo(\cf2 Point\cf0 (lin2, lin));\
+			\cf4 // top line\cf0 \
+			\cf2 Pen\cf0 .moveTo(\cf2 Point\cf0 (lin2, lin2));\
+			\cf2 Pen\cf0 .lineTo(\cf2 Point\cf0 (lin, lin2));							\
+			\
+			\cf4 // diagonal points\cf0 \
+			\cf4 // bottom left\cf0 \
+			\cf2 Pen\cf0 .moveTo(\cf2 Point\cf0 (ln2, ln));\
+			\cf2 Pen\cf0 .lineTo(\cf2 Point\cf0 (lin2, lin));	\
+			\cf4 // bottom right \cf0 \
+			\cf2 Pen\cf0 .moveTo(\cf2 Point\cf0 (ln, ln));\
+			\cf2 Pen\cf0 .lineTo(\cf2 Point\cf0 (lin, lin));\
+			\cf4 // top left\cf0 \
+			\cf2 Pen\cf0 .moveTo(\cf2 Point\cf0 (ln2, ln2));\
+			\cf2 Pen\cf0 .lineTo(\cf2 Point\cf0 (lin2, lin2));\
+			\cf4 // top right\cf0 \
+			\cf2 Pen\cf0 .moveTo(\cf2 Point\cf0 (ln, ln2));\
+			\cf2 Pen\cf0 .lineTo(\cf2 Point\cf0 (lin, lin2));			\
+			\
+			\cf2 Pen\cf0 .stroke;\
+			\
+\}; \cf4 // end use\cf0 \
+\}; \cf4 // end drawhook\cf0 \
+\
+)\
+\
+}
